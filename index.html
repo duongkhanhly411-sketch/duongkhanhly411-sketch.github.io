@@ -54,7 +54,26 @@
             /* Đảm bảo tên file ảnh là avatar.jpg */
             background-image: url('avatar.jpg'); 
             background-size: cover; /* Ảnh phủ kín khung */
-            background-position: center top; /* Căn giữa phía trên để lấy trọn khuôn mặt */
+            .hero-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* Đảm bảo tên file ảnh là chính xác */
+            background-image: url('avatar.jpg'); 
+            background-size: cover; 
+            
+            /* --- SỬA LẠI PHẦN NÀY --- */
+            background-position: center center; /* Đưa ảnh vào chính giữa */
+            transform: scale(1.1); /* Phóng to ảnh lên 10% cho nổi bật */
+            /* ------------------------ */
+            
+            /* Hiệu ứng BLUR giữ nguyên */
+            -webkit-mask-image: linear-gradient(to right, black 50%, transparent 100%);
+            mask-image: linear-gradient(to right, black 50%, transparent 100%);
+            z-index: 1;
+        }
             
             /* --- Hiệu ứng BLUR thần thánh --- */
             /* Tạo mặt nạ: Bên trái rõ (đen), bên phải mờ dần (trong suốt) */

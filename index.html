@@ -32,4 +32,127 @@
         .hero p { font-size: 1.2rem; color: #666; margin-bottom: 30px; }
         .highlight { color: var(--accent); }
         .btn { display: inline-block; padding: 12px 30px; background: var(--accent); color: white; text-decoration: none; border-radius: 30px; font-weight: bold; transition: 0.3s; box-shadow: 0 5px 15px rgba(233, 69, 96, 0.4); }
-        .btn:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(233
+        .btn:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(233, 69, 96, 0.6); }
+
+        /* Sections General */
+        section { padding: 80px 10%; }
+        .section-title { text-align: center; margin-bottom: 50px; font-size: 2rem; position: relative; }
+        .section-title::after { content: ''; width: 60px; height: 4px; background: var(--accent); display: block; margin: 10px auto 0; border-radius: 2px; }
+
+        /* About & Skills */
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+        .skill-list { list-style: none; margin-top: 20px; }
+        .skill-list li { margin-bottom: 15px; display: flex; align-items: center; }
+        .skill-list i { color: var(--accent); margin-right: 15px; font-size: 1.2rem; width: 30px; }
+
+        /* Projects Grid */
+        .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .project-card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: 0.4s ease; border: 1px solid #eee; }
+        .project-card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
+        .card-content { padding: 25px; }
+        .card-tag { background: #f0f0f0; color: #555; padding: 5px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; display: inline-block; margin-bottom: 10px; }
+        .card-title { font-size: 1.3rem; margin-bottom: 10px; color: var(--dark); }
+        .card-desc { font-size: 0.95rem; color: #666; margin-bottom: 20px; }
+        .card-link { color: var(--accent); text-decoration: none; font-weight: bold; font-size: 0.9rem; }
+
+        /* Footer */
+        footer { text-align: center; padding: 40px; background: var(--dark); color: white; }
+        .social-links { margin-bottom: 20px; }
+        .social-links a { color: white; font-size: 1.5rem; margin: 0 10px; transition: 0.3s; }
+        .social-links a:hover { color: var(--accent); }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .about-grid { grid-template-columns: 1fr; }
+            nav { justify-content: center; }
+            .nav-links { display: none; } /* Giấu menu trên mobile cho gọn */
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Khánh Ly.</div>
+        <div class="nav-links">
+            <a href="#about">Giới thiệu</a>
+            <a href="#projects">Dự án</a>
+            <a href="#contact">Liên hệ</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div>
+            <h1>Hi, I'm <span class="highlight">Khánh Ly</span></h1>
+            <p>Sinh viên năm 2 | Aspiring Business Analyst 🚀</p>
+            <p style="font-size: 0.9rem; margin-top: -20px; margin-bottom: 30px; opacity: 0.8;">Yêu thích dữ liệu, cái đẹp & sự logic.</p>
+            <a href="#contact" class="btn">Liên hệ tôi</a>
+        </div>
+    </header>
+
+    <section id="about">
+        <h2 class="section-title">Về bản thân</h2>
+        <div class="about-grid">
+            <div class="about-text">
+                <p>Chào bạn! Mình là một sinh viên năm 2 đầy nhiệt huyết. Mình đang theo đuổi con đường trở thành một <strong>Business Analyst (BA)</strong> chuyên nghiệp.</p>
+                <br>
+                <p>Với nền tảng về IT (C++, C) kết hợp với tư duy thiết kế (Figma) và kinh nghiệm tổ chức sự kiện, mình mong muốn tạo ra những sản phẩm công nghệ không chỉ "chạy được" mà còn mang lại trải nghiệm tuyệt vời cho người dùng.</p>
+            </div>
+            <div class="skills">
+                <h3>Kỹ năng chính</h3>
+                <ul class="skill-list">
+                    <li><i class="fas fa-chart-line"></i> Business Analysis Mindset</li>
+                    <li><i class="fab fa-figma"></i> UI/UX Design (Figma)</li>
+                    <li><i class="fas fa-code"></i> Lập trình C++, C, HTML/CSS</li>
+                    <li><i class="fas fa-users"></i> Tổ chức sự kiện & Teamwork</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" style="background-color: #fcfcfc;">
+        <h2 class="section-title">Dự án tiêu biểu</h2>
+        <div class="project-grid">
+            
+            <div class="project-card">
+                <div class="card-content">
+                    <span class="card-tag">UI/UX Design</span>
+                    <h3 class="card-title">Thiết kế App Smart TV</h3>
+                    <p class="card-desc">Giao diện ứng dụng xem phim trên TV thông minh, tối ưu hóa thao tác điều khiển từ xa. Thiết kế hoàn chỉnh trên Figma.</p>
+                    <a href="#" class="card-link">Xem chi tiết <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="card-content">
+                    <span class="card-tag">C++ / Algorithms</span>
+                    <h3 class="card-title">Quản lý Thư viện Sách</h3>
+                    <p class="card-desc">Hệ thống quản lý mượn trả sách, áp dụng OOP, quản lý file và các thuật toán tìm kiếm/sắp xếp tối ưu.</p>
+                    <a href="#" class="card-link">Xem Code <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="card-content">
+                    <span class="card-tag">Event</span>
+                    <h3 class="card-title">Sự kiện Chào Tân Sinh Viên</h3>
+                    <p class="card-desc">Lên concept "Vượt Vũ" và tổ chức sự kiện chào đón K19, thu hút sự tham gia của 500+ sinh viên khoa IT.</p>
+                    <a href="#" class="card-link">Xem ảnh <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <p>Kết nối với mình: <a href="mailto:ly@example.com" style="color: #e94560;">ly@example.com</a></p>
+        <p style="font-size: 0.8rem; margin-top: 20px; opacity: 0.5;">© 2026 Duong Khanh Ly.</p>
+    </footer>
+
+</body>
+</html>

@@ -52,17 +52,22 @@
             width: 100%;
             height: 100%;
             
-            /* Đã cập nhật đúng tên file mới của bà */
+            /* Đảm bảo đúng tên file ảnh trên GitHub của bà */
             background-image: url('avatar.jpg'); 
+            
+            /* --- THAY ĐỔI MẠNH Ở ĐÂY --- */
             background-size: cover;
             
-            /* Căn giữa và Phóng to */
-            background-position: center center;
-            transform: scale(1.2); 
+            /* 1. Căn vị trí: Giữ giữa chiều ngang, nhưng đẩy ảnh lên trên một chút (30%) để lấy khuôn mặt */
+            background-position: center 30%; 
             
-            /* Hiệu ứng làm mờ sang phải */
-            -webkit-mask-image: linear-gradient(to right, black 50%, transparent 100%);
-            mask-image: linear-gradient(to right, black 50%, transparent 100%);
+            /* 2. Phóng to: Tăng từ 1.1 lên hẳn 1.6 lần (gần gấp đôi) */
+            transform: scale(1.6); 
+            
+            /* --- Hiệu ứng làm mờ --- */
+            /* Đẩy vùng đen lên 70% để phần người rõ nét nhất có thể trước khi mờ đi */
+            -webkit-mask-image: linear-gradient(to right, black 70%, transparent 100%);
+            mask-image: linear-gradient(to right, black 70%, transparent 100%);
             z-index: 1;
         }
 
